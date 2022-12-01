@@ -28,6 +28,7 @@ function authHeader(url) {
   const token = authToken();
   const isLoggedIn = !!token;
   const isApiUrl = url.startsWith(process.env.REACT_APP_API_URL);
+  console.log(process.env.REACT_APP_API_URL);
   if (isLoggedIn && isApiUrl) {
     return { Authorization: `Bearer ${token}` };
   } else {

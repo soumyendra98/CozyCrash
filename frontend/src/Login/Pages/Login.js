@@ -23,7 +23,7 @@ function Login() {
 
   // form validation rules
   const validationSchema = Yup.object().shape({
-    username: Yup.string().required("Username is required"),
+    email: Yup.string().required("Username is required"),
     password: Yup.string().required("Password is required"),
   });
   const formOptions = { resolver: yupResolver(validationSchema) };
@@ -32,8 +32,8 @@ function Login() {
   const { register, handleSubmit, formState } = useForm(formOptions);
   const { errors, isSubmitting } = formState;
 
-  function onSubmit({ username, password }) {
-    return dispatch(authActions.login({ username, password }));
+  function onSubmit({ email, password }) {
+    return dispatch(authActions.login({ email, password }));
   }
 
   return (
@@ -50,14 +50,12 @@ function Login() {
             <div className="form-group">
               <label>Username</label>
               <input
-                name="username"
-                type="text"
-                {...register("username")}
-                className={`form-control ${
-                  errors.username ? "is-invalid" : ""
-                }`}
+                name="email"
+                type="email"
+                {...register("email")}
+                className={`form-control ${errors.email ? "is-invalid" : ""}`}
               />
-              <div className="invalid-feedback">{errors.username?.message}</div>
+              <div className="invalid-feedback">{errors.email?.message}</div>
             </div>
             <div className="form-group">
               <label>Password</label>
