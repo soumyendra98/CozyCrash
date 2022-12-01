@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const AmenitySchema = new Schema(
     {
-        _id: Schema.Types.ObjectId,
         name: {
             type: String,
             required: true,
@@ -32,6 +31,7 @@ const AmenitySchema = new Schema(
                     },
                 }
             },
+            _id: false,
         },
         capacity:{
             type: Number,

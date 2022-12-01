@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const EventSchema = new Schema({
-    _id: Schema.Types.ObjectId,
     title: {
         type: String,
         required: true,
@@ -24,6 +23,7 @@ const EventSchema = new Schema({
                     minutes: Number,
                     seconds: Number
                 },
+                _id: false,
             },
             end: {
                 required: true,
@@ -32,8 +32,10 @@ const EventSchema = new Schema({
                     minutes: Number,
                     seconds: Number
                 },
+                _id: false,
             }
         },
+        _id: false,
     },
     venue: {    
         type: String,

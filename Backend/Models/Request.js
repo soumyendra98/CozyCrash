@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const RequestSchema = new Schema({
-    _id: Schema.Types.ObjectId,
     society_id: {
         type: Schema.Types.ObjectId,
         required: true,

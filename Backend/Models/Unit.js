@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const UnitSchema = new Schema({
-    _id: Schema.Types.ObjectId,
     society_id: {
         type: Schema.Types.ObjectId,
         required: true,
@@ -19,7 +18,8 @@ const UnitSchema = new Schema({
                 required: true,
                 enum: ["Sq. Ft.", "Sq. Yd.", "Sq. Mtr."],
             },
-        },  
+        },
+        _id: false,  
         required: true,
     },
     parkings: {
@@ -33,24 +33,26 @@ const UnitSchema = new Schema({
     blueprint: {
         type: String,
     },
-    rent: {
-        type: [
-            {
-                value: { 
-                    type: Number,
-                    required: true,
+    rent: [
+        {
+            type: 
+                {
+                    value: { 
+                        type: Number,
+                        required: true,
+                    },
+                    fromDate: {
+                        type: Date,
+                        required: true,
+                    },
+                    toDate: {
+                        type: Date,
+                        required: true,
+                    },
                 },
-                fromDate: {
-                    type: Date,
-                    required: true,
-                },
-                toDate: {
-                    type: Date,
-                    required: true,
-                },
-            }
-        ]
-    },
+            _id: false,
+        }
+    ],
     isRented: {
         type: Boolean,
         required: true,
