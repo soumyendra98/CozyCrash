@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const panelController = require("../Controllers/Admin/Panel");
+const panelController = require("../../Controllers/Admin/Panel");
 
 // Route to get List of all events
 router.get("/events/getAll", panelController.getAllEvents);
@@ -15,6 +15,10 @@ router.post("/events/create", panelController.createEvent);
 
 // Route to edit a event
 router.put("/events/edit/:id", panelController.editEvent);
+
+// Route to delete a event
+router.delete("/events/delete/:id", panelController.deleteEvent);
+
 
 // Route to get List of all Open Requests
 router.get("/openRequests/getAll", panelController.getAllOpenRequests);

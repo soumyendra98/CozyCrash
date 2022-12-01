@@ -5,7 +5,7 @@ const AmenitySchema = new Schema(
     {
         _id: Schema.Types.ObjectId,
         name: {
-            typse: String,
+            type: String,
             required: true,
         },
         society_id: {

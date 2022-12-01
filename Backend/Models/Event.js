@@ -59,7 +59,7 @@ const EventSchema = new Schema({
 },
 { 
     timestamps: true,
-    collection : 'Amenities' 
+    collection : 'Events' 
 }
 );
 

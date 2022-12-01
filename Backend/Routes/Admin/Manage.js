@@ -2,10 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
-const manageController = require("../Controllers/Admin/Manage");
+const manageController = require("../../Controllers/Admin/Manage");
 
 // Route to get List of all users
-router.get("/users/getAll", manageController.getAllUsers);
+router.get("/users/getAll/:society_id", manageController.getAllUsers);
 
 // Route to get a user
 router.get("/users/get/:id", manageController.getUser);
@@ -20,7 +20,7 @@ router.put("/users/edit/:id", manageController.editUser);
 router.delete("/users/delete/:id", manageController.deleteUser);
 
 // Route to get List of all Units
-router.get("/units/getAll", manageController.getAllUnits);
+router.get("/units/getAll/:society_id", manageController.getAllUnits);
 
 // Route to get a Unit
 router.get("/units/get/:id", manageController.getUnit);

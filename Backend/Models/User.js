@@ -15,6 +15,11 @@ const UserSchema = new Schema({
         type: Number,
         required: true,
     },
+    society_ids:[ {
+        type: Schema.Types.ObjectId,
+        ref: 'Society',
+        required: true,
+    }],
     unit_id: {
         type: Schema.Types.ObjectId,
         required: true,
@@ -49,6 +54,11 @@ const UserSchema = new Schema({
     yearly_income: {
         type: Number,
         required: true,
+    },
+    isAdmin: {
+        type: Boolean,
+        required: true,
+        default: false,
     }
 },
 {
