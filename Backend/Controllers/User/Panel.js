@@ -4,7 +4,7 @@ const joinEvent = async (req, res) => {
   try {
     const event = await Event.findById(req.params.event_id);
     if (event.current_count < event.capacity) {
-      event.current_count += 1;
+      event.current_count += 1
       event.attendees.push(req.body.user_id);
       await event.save();
       res.status(200).json({
