@@ -1,10 +1,10 @@
+const User = require("../../Models/User");
 const Login = require("../../Models/Login");
 const config = require("../../config.json");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 const authenticateUser = async (req, res) => {
-  console.log(req.body);
   const { email, password } = req.body;
   const user = await Login.findOne({ email });
   if (!user) {
@@ -16,12 +16,17 @@ const authenticateUser = async (req, res) => {
   }
   const payload = {
     user: {
-      id: user.id,
+      id: user.user_id,
     },
   };
+  const user_details = await User.findOne({ _id: user.user_id });
+
   jwt.sign(payload, config.secret, { expiresIn: "7d" }, (err, token) => {
     if (err) throw err;
-    res.json({ token });
+    res.json({
+      token: token,
+      user: user_details,
+    });
   });
 };
 
