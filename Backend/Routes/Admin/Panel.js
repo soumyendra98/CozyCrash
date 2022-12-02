@@ -5,7 +5,7 @@ const router = express.Router();
 const panelController = require("../../Controllers/Admin/Panel");
 
 // Route to get List of all events
-router.get("/events/getAll", panelController.getAllEvents);
+router.get("/events/getAll/:society_id", panelController.getAllEvents);
 
 // Route to get an event
 router.get("/events/get/:id", panelController.getEvent);
@@ -19,12 +19,17 @@ router.put("/events/edit/:id", panelController.editEvent);
 // Route to delete a event
 router.delete("/events/delete/:id", panelController.deleteEvent);
 
-
 // Route to get List of all Open Requests
-router.get("/openRequests/getAll", panelController.getAllOpenRequests);
+router.get(
+  "/openRequests/getAll/:society_id",
+  panelController.getAllOpenRequests
+);
 
-// Route to get a List of all Closed Requests 
-router.get("/closedRequests/getAll", panelController.getAllClosedRequests);
+// Route to get a List of all Closed Requests
+router.get(
+  "/closedRequests/getAll/:society_id",
+  panelController.getAllClosedRequests
+);
 
 // Route to get a  Request
 router.get("/requests/get/:id", panelController.getRequest);
@@ -46,6 +51,5 @@ router.get("/amenities/get/:id", panelController.getAmenity);
 
 // Route to delete an Amenity
 router.delete("/amenities/delete/:id", panelController.deleteAmenity);
-
 
 module.exports = router;

@@ -4,7 +4,7 @@ const Amenity = require("../../Models/amenity");
 
 // Get all events
 const getAllEvents = (req, res) => {
-  Event.find()
+  Event.find({ society_id: req.params.society_id })
     .then((events) => {
       res.status(200).json({
         message: "Events fetched successfully!",
@@ -41,23 +41,24 @@ const createEvent = (req, res) => {
     title: req.body.title,
     description: req.body.description,
     date: req.body.date,
-    time: {
+    timings: {
       start: {
-        hours: req.body.time.start.hours,
-        minutes: req.body.time.start.minutes,
-        seconds: req.body.time.start.seconds,
+        hours: req.body.timings.start.hours,
+        minutes: req.body.timings.start.minutes,
+        seconds: req.body.timings.start.seconds,
       },
       end: {
-        hours: req.body.time.end.hours,
-        minutes: req.body.time.end.minutes,
-        seconds: req.body.time.end.seconds,
+        hours: req.body.timings.end.hours,
+        minutes: req.body.timings.end.minutes,
+        seconds: req.body.timings.end.seconds,
       },
     },
     venue: req.body.venue,
-    society_id: req.userData.society_id,
+    society_id: req.body.society_id,
     capacity: req.body.capacity,
     cost: req.body.cost,
     isPetFriendly: req.body.isPetFriendly,
+    // attendees: [],
   });
   event
     .save()
@@ -71,6 +72,7 @@ const createEvent = (req, res) => {
       });
     })
     .catch((error) => {
+      console.log(error);
       res.status(500).json({
         message: "Creating an event failed!",
       });
@@ -129,7 +131,7 @@ const deleteEvent = (req, res) => {
     })
     .catch((error) => {
       res.status(500).json({
-        message: "Deleting events failed!",
+        message: "Deleting event failed!",
       });
     });
 };

@@ -54,6 +54,7 @@ const EventSchema = new Schema(
     current_count: {
       type: Number,
       required: true,
+      default: 0,
     },
     cost: {
       type: Number,
@@ -63,6 +64,12 @@ const EventSchema = new Schema(
       type: Boolean,
       required: true,
     },
+    attendees: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
   },
   {
     timestamps: true,
@@ -70,4 +77,5 @@ const EventSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Event", EventSchema);
+module.exports =
+  mongoose.models["Event"] || mongoose.model("Event", EventSchema);

@@ -26,13 +26,15 @@ app.use(express.json());
 app.use(jwt());
 
 // Routes
-const PanelRouter = require("./routes/Admin/Panel");
+const AdminPanelRouter = require("./routes/Admin/Panel");
 const MangeRouter = require("./routes/Admin/Manage");
 const LoginRouter = require("./routes/Login/Login");
+const UserPanelRouter = require("./routes/User/Panel");
 
 app.use(LoginRouter);
-app.use(PanelRouter);
+app.use(AdminPanelRouter);
 app.use(MangeRouter);
+app.use(UserPanelRouter);
 
 // Server
 app.listen(port, () => console.log(`Listening on port ${port}`));
