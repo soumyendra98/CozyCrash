@@ -12,4 +12,5 @@ const tryCatch = (controller) => {
   };
 };
 
-export default tryCatch;
+export default tryCatch;  
+
