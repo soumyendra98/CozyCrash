@@ -33,66 +33,105 @@ We'd like to express our gratitude and appreciation to everyone who helped us co
 
 
 **Chapter 1 Introduction**
+
 1.1  Project goals and objectives
+
 1.2  Problem and motivation
-1.3  Project application and impact                                        
-1.4  Project results and deliverables                                                                           
-1.5  Market research                                                                                       
+
+1.3  Project application and impact    
+
+1.4  Project results and deliverables    
+
+1.5  Market research                 
+
 1.6  Project report structure     
 
 **Chapter 2 Project Background and Related Work**
+
 2.1  Background and used technologies
+
 2.2 State-of-the-art technologies
+
 2.3  Literature survey
 
 **Chapter 3 System Requirements and Analysis**
+
 3.1Domain and business requirements
+
 3.2Customer-oriented requirements
+
 3.3 System function requirements
+
 3.4System behavior requirements
+
 3.5	System performance and non-functional requirements
+
 3.6	System context and interface requirements
+
 3.7	Technology and resource requirements
  
 **Chapter 4 System Design**
+
 4.1.   System architecture design
+
 4.2.   System data and database design (for software project only)
+
 4.3.   System interface and connectivity design
+
 4.4.   System user interface design (for software project only)
+
 4.5.   System component API and logic design (for software project only)
+
 4.6    System design problems, solutions, and patterns
 
 **Chapter 5 System Implementation**
+
 5.1.   System implementation summary
+
 5.2.   System implementation issues and resolutions
+
 5.3.   Used technologies and tools
  
 **Chapter 6 System Testing and Experiment**
+
 6.1    Testing and experiment scope
+
 6.2    Testing and experiment approaches
+
 6.3.   Testing report (or case study results)
  
 **Chapter 7 Conclusion and Future Work**
+
 7.1 Project summary
 
 7.2 Future work
  
 **References**
+
 [1] …
+
 …
+
 Appendix
+
 Appendix 1 [Title]  	(for example, your selected hardware/software standard)
+
 Appendix 2 [Title]  	(for example, your detailed algorithms for your solutions)
  
 
 **List of Figures**
+
 Figure 1. Figure Title.............................................................................................. Page No.
+
 Figure 2. Figure Title.............................................................................................. Page No.
 …
+
 Figure M. Figure Title---------------------------------------------------------------------- Page No.
 
 **List of Tables**
+
 Table 1. Table Title................................................................................................ Page No.
+
 Table 2. Table Title................................................................................................ Page No.
 …
  
@@ -128,14 +167,23 @@ Deliverables:
 
 1) GitHub URL: https://github.com/soumyendra98/CMPE-272-Term-Project
 2)Report
+
 1.5	Project report Structure
+
 The structure of this project report is followed as per the Table of Contents.
+
 ●         	Introduction
+
 ●         	Project Background and Related Work
+
 ●         	System Requirements and Analysis
+
 ●         	System Design
+
 ●         	System Implementation
+
 ●         	System Testing and Experiment
+
 ●         	Conclusion and Future Work
 
  
@@ -161,16 +209,25 @@ Business requirements of the portal: User: Applying and setting up rooms on our 
 
  
 **Major classes being used:**
+
 **1. Admin/Volunteer**
+
 ○ They have access to add new rooms
+
 ○ They can update the rooms
+
 ○ They can remove the rooms
+
 ○ They can confirm room checkups
 
 **2. User**
+
 ○ They are able to view all the rooms available 
+
 ○ They are able to update their individual rooms
+
 ○ They are able to give rating to rooms
+
 ○ They are able to set ranges for the prices
 
 
@@ -181,8 +238,11 @@ Business requirements of the portal: User: Applying and setting up rooms on our 
 Expected user groups for the portal are as follows: 
 
 ● Guest
+
 ● Admin
+
 ● Users
+
 
 
 
