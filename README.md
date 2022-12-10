@@ -262,12 +262,23 @@ Expected user groups for the portal are as follows:
 | --- | --- | --- | --- |
 | +AddRentedRooms() | Category details such as: Name, Description, Image, Review | Adding a new room in the portal | This function is accessible by Admin and User |
 | +ViewRentedRooms() | Category details such as: Name, Description, Image, Review | Loads category in the homepage | This function is accessible by Guest, Admin and User |
-| +ModifyRentedRooms()
- | Changes in particular category | Changes the category details | This function is accessible by the Admin, User
- |
+| +ModifyRentedRooms()| Changes in particular category | Changes the category details | This function is accessible by the Admin, User|
 | +DeleteRentedRooms() | Removal of particular category | Removes all the identifiers in the category | This function is accessible by the Admin, User |
 | +GetRegistered | Getting your details saved on the portal | Details added on the portal | This function is accessible by the Guest |
 
+
+
+**3.4.   System performance and non-functional requirements**
+
+**Security:** We have encrypted the password by hashing it and storing it in the database. And each time a user enters a password, it is hashed and compared to the password stored in the database. 
+
+The user passwords are therefore stored securely in our database.
+
+**Availability:** We have maintained the back up of the data during an event of data loss so that the website remains highly available at all times.
+
+**Usability:** The portal is easy to navigate and comprehend. It follows intuitive visual hierarchies to direct the user to the right functionalities.
+
+**Maintainability:** The portal is easy to maintain and change with a minimum number of dependencies.
 
 
 
