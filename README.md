@@ -244,6 +244,19 @@ Expected user groups for the portal are as follows:
 ● Users
 
 
+**3.3.   System (or component) function requirements**
+
+**Functional Requirements:**
+
+● Register and authenticate Users/ Guest / Admins
+
+● View Rooms available on the website
+
+● Book a Room
+
+● Add a new place to the system
+
+● Add user details
 
 
 
