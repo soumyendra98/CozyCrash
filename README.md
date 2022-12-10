@@ -281,4 +281,15 @@ The user passwords are therefore stored securely in our database.
 **Maintainability:** The portal is easy to maintain and change with a minimum number of dependencies.
 
 
+**3.5.System behavior requirements
+**
+| Sr No.| Context|Environment|
+| --- | --- | --- | --- |
+| 1. | Deployement | Heroku |
+| 2. | Load Balancing | ELB |
+| 3. | Version Control  | Github |
+| 4. | Development IDE  | Visual Studio Code |
+
+
+
 
