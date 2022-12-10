@@ -1,11 +1,11 @@
 # CMPE-272-Term-Project
 
 
-COUCH SURFERS
-A Project Report
-Presented to
-CMPE-272
-Fall, 2022
+    COUCH SURFERS
+    A Project Report
+    Presented 
+    CMPE-272
+    Fall, 2022
 
 
 **By**
