@@ -281,15 +281,135 @@ The user passwords are therefore stored securely in our database.
 **Maintainability:** The portal is easy to maintain and change with a minimum number of dependencies.
 
 
-**3.5.System behavior requirements
-**
-| Sr No.| Context|Environment|
-| --- | --- | --- | --- |
-| 1. | Deployement | Heroku |
-| 2. | Load Balancing | ELB |
-| 3. | Version Control  | Github |
-| 4. | Development IDE  | Visual Studio Code |
+**3.5.System behavior requirements**
+
+| **Sr No.** | **Context** | **Environment** |
+| --- | --- | --- |
+| **1.** | **Deployment** | **Heroku** |
+| **2.** | **Load Balancing** | **ELB** |
+| **3.** | **Version Control** | **Github** |
+| **4.** | **Development IDE** | **Visual Studio Code** |
+
+**3.7.Technology and resource requirements**
+
+Technology and resource requirements
+
+List of technologies used:
+
+1. React.Js: Used it for frontend
+2. MongoDB: We used it as our database to store user data as well as product-related
+data.
+3. Node.Js: Used it as a backend framework
+4. Express.Js: Used it as backed framework
+5. Jenkins: Used for CICD
+6. Github: Used for version control
 
 
+**Chapter 5   System Implementation**
+**5.1.   System implementation summary**
+
+Couch Surfers is a full-stack web application created using MERN Stack (Mongo, Express, React, and Node) to satisfy multi-functional features ranging from creating new rooms for rent and managing Rooms and Users. We used Heroku to deploy our application and also to ensure continuous integration and continuous deployment (CICD) using the Github triggers. Our application is open-source and the source code is available on GitHub. 
+
+**5.2.   System implementation issues and resolutions**
+
+The issues we faced while implementing are 
+
+**1. Security:** We had to store sensitive user data like passwords for authentication, and storing them without encryption is risky. The resolution to that issue was by using BCrypt password-hashing function to ensure protected passwords and JWT tokens to ensue application integrity. 
+
+**2. Deployment:** We had to set up a highly available, secure, low-cost, and reliable infrastructure for our application that can automatically scale as the number of users increases or decreases. For that, we leveraged  Heroku, as it is easy to setup and scale as well as it has Github triggers which help with CI/CD.
+ 
+**5.3.   Used technologies and tools**
+MongoDB: We used it as our database to store data.
+ExpressJS and Node.JS: Used it for Server Side.
+React: Used it for creating Client Side. 
+GitHub: Used it as a host for git version control.
+Heroku: Used it for Deployment and CICD.
+Draw.io: Used it for creating diagrams.
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Chapter 6   System Testing and Experiment**
+ 
+**6.1    Testing and experiment scope**
+		 	 	 		
+We performed the following types of testing on our application to cover all possible test scenarios.
+
+**6.2    Testing and experiment approaches**
+		 	 	 		
+Every team member accepted ownership of every feature. Every feature on the list has been thoroughly tested. Furthermore, each feature was evaluated for each position and its intended behavior on an individual basis. To ensure a fully functional application, all features and implementations must be completed. We used a Top-Down approach to test the UI components. The top-level module is created and tested first in a top-down integration test. Furthermore, it is tested further and the immediate sub-modules are integrated. If the module to be integrated has not been written and tested, stubs are required to complete the integration testing with a top-level module. We began with Login/Sign up and worked our way up to order confirmation.
+			
+The module's team developer had tested the following for all of the UI components in the portal:
+
+**Functional Evaluation: **
+
+Ensure that users can enter a valid username.
+Examine whether the login page accepts the user's credentials.
+Incorrect username verification fails login.
+Verify invalid username and invalid password entered at the same time fail.
+The password field is insufficiently long to validate input data.
+The password field is far too long.
+Validation should be applied to input fields.
+Non-functional :
+Check that the service is unavailable.
+Appropriate 404 page error message.
+Database authorized accessibility. 
+
+**6.3    Testing and experiment**
+
+**Chapter 7   Conclusion and Future Work**
+ 
+**7.1 Project summary**
+		 	 	 		
+We were successful in creating a web application that couch surfers can access from anywhere. They can check availability and book accommodations in seconds. This application can help couch surfers save time. It saves them time on bookings. It makes inventory management simple for users. It enables users to travel the world with ease. We used cutting-edge technologies like NodeJS, ReactJS, and MongoDB. To deploy the application, we found cost-effective and widely available solutions. Our project would undoubtedly be beneficial to all couch surfers planning to travel the world.
+					
+
+**7.2 Future work**
+
+We are planning to incorporate a few features in the future to our project and they are chatbot which works with AI and NLP technologies like spacy and chatterbot using python, a messenger for direct communication between surfers and renters using FB chat messenger libraries, an analytics dashboard for Visualizing the price statistics for renters using powerbi, a notification service via voice, text, email and social channels using push.js Notification Framework
+ 
+
+
+
+
+
+
+
+**References**
+
+https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/bucket-list-travels-santorini.jpg
+https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Banff-to-Jasper-Icefields-Parkway-Lake-Louise.jpg
+https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Things-to-in-Winter-in-Canada-Pond-Hockey-Lake-Louise.jpg
+https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Adventure-couples-Maldives-Bungalow.jpg
+https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/vietnam-sapa-rice-terraces.jpg
+https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/amalfi-coast-road-trips-positano-view.jpg
+https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Cities-in-Italy-Amalfi-Coast-Towns.jpg
+https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Adventures-for-couples-Iguazu-Falls-1.jpg
+https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/beautiful-places-in-the-world-tigers-nest.jpg
+https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-venice-gettyimages-489741024-1505338894.jpg?crop=1xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-machu-ppichu-gettyimages-629556601-1505338681.jpg?crop=1xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/1280x1919/japan-gettyimages-137098062.jpg?resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/marrakech-gettyimages-152834676.jpg?crop=1.0xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/tamil-nadu-gettyimages-152415224.jpg?crop=1.0xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/gettyimages-116147513.jpg?crop=1.0xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/myanmar-gettyimages-137671616_1.jpg?crop=1.0xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/abu-dhabi-gettyimages-487888511_1.jpg?crop=1xw:0.9998272287491361xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/lisbon-gettyimages-488108027_1.jpg?crop=1.0xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/moscow-gettyimages-552609685_1.jpg?crop=1xw:0.9999035865792518xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/1461268850-paris-gettyimages-182176376.jpg?crop=1.0xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/india.jpg?crop=1.0xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/2048x3071/gallery-nyc-gettyimages-486543121-1.jpg?resize=980:*
+https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/barcelona-parc-guell-at-sunset-royalty-free-image-1571860792.jpg?crop=1xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/camel-in-desert-with-pyramids-background-royalty-free-image-1571860986.jpg?crop=1xw:1xh;center,top&resize=980:*
+https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cano-cristales-colombia-gettyimages-1655139359.jpg?crop=1xw:1xh;center,top&resize=980:*
 
 
