@@ -258,6 +258,16 @@ Expected user groups for the portal are as follows:
 
 ● Add user details
 
+| Component | Input | Output | Behavior |
+| --- | --- | --- | --- |
+| +AddRentedRooms() | Category details such as: Name, Description, Image, Review | Adding a new room in the portal | This function is accessible by Admin and User |
+| +ViewRentedRooms() | Category details such as: Name, Description, Image, Review | Loads category in the homepage | This function is accessible by Guest, Admin and User |
+| +ModifyRentedRooms()
+ | Changes in particular category | Changes the category details | This function is accessible by the Admin, User
+ |
+| +DeleteRentedRooms() | Removal of particular category | Removes all the identifiers in the category | This function is accessible by the Admin, User |
+| +GetRegistered | Getting your details saved on the portal | Details added on the portal | This function is accessible by the Guest |
+
 
 
 
