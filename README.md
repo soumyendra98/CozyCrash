@@ -350,7 +350,7 @@ Every team member accepted ownership of every feature. Every feature on the list
 			
 The module's team developer had tested the following for all of the UI components in the portal:
 
-**Functional Evaluation: **
+Functional Evaluation:
 
 Ensure that users can enter a valid username.
 Examine whether the login page accepts the user's credentials.
